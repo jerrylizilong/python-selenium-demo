@@ -1,0 +1,10 @@
+[
+  "test_convert_md5.py::MyTestCase::test_empty",
+  "test_convert_md5.py::MyTestCase::test_letters",
+  "test_convert_md5.py::MyTestCase::test_numbers",
+  "test_convert_md5.py::MyTestCase::test_space",
+  "test_convert_up_low.py::MyTestCase::test_something1",
+  "test_convert_up_low.py::MyTestCase::test_something2",
+  "test_convert_up_low.py::MyTestCase::test_something3",
+  "test_convert_up_low.py::MyTestCase::test_something4"
+]

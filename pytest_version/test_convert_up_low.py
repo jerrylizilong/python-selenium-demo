@@ -1,11 +1,12 @@
 import unittest
-import convert_up_low
+from pytest_version import convert_up_low
+
 
 class MyTestCase(unittest.TestCase):
     def test_something1(self):
         keyw = 'abcdD'
         method = 'low'
-        result = convert_up_low.convert_up_low().convert_up_low(keyw,method)
+        result = convert_up_low.convert_up_low().convert_up_low(keyw, method)
         if method == 'upper':
             self.assertEqual(result,keyw.upper())
         else:
@@ -14,7 +15,7 @@ class MyTestCase(unittest.TestCase):
     def test_something2(self):
         keyw = 'abcd324D'
         method = 'low'
-        result = convert_up_low.convert_up_low().convert_up_low(keyw,method)
+        result = convert_up_low.convert_up_low().convert_up_low(keyw, method)
         if method == 'upper':
             self.assertEqual(result, keyw.upper())
         else:
@@ -23,7 +24,7 @@ class MyTestCase(unittest.TestCase):
     def test_something3(self):
         keyw = 'abcdD'
         method = 'upper'
-        result = convert_up_low.convert_up_low().convert_up_low(keyw,method)
+        result = convert_up_low.convert_up_low().convert_up_low(keyw, method)
         if method == 'upper':
             self.assertEqual(result, keyw.upper())
         else:
@@ -32,7 +33,7 @@ class MyTestCase(unittest.TestCase):
     def test_something4(self):
         keyw = 'abcdD342'
         method = 'upper'
-        result = convert_up_low.convert_up_low().convert_up_low(keyw,method)
+        result = convert_up_low.convert_up_low().convert_up_low(keyw, method)
         if method == 'upper':
             self.assertEqual(result, keyw.upper())
         else:
