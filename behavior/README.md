@@ -108,22 +108,22 @@ behave demo.feature >result.txt
 Feature: test for the lower-upper convent # demo.feature:1
 
   Scenario: convent lower to upper  # demo.feature:2
-    When I open page                # steps/demo.py:6
-    When I input "abcdefghijk"      # steps/demo.py:13
-    When I click "大写"               # steps/demo.py:18
-    Then I see "ABCDEFGHIJK"        # steps/demo.py:27
+    When I open page                testPageObjects.py
+    When I input "abcdefghijk"      testPageObjects.py
+    When I click "大写"               testPageObjects.py
+    Then I see "ABCDEFGHIJK"        testPageObjects.py
 
   Scenario: convent upper to lower  # demo.feature:8
-    When I open page                # steps/demo.py:6
-    When I input "ABCDEFGHIJK"      # steps/demo.py:13
-    When I click "小写"               # steps/demo.py:18
-    Then I see "abcdefghijk"        # steps/demo.py:27
+    When I open page                testPageObjects.py
+    When I input "ABCDEFGHIJK"      testPageObjects.py
+    When I click "小写"               testPageObjects.py
+    Then I see "abcdefghijk"        testPageObjects.py
 
   Scenario: convent upper to lower  # demo.feature:14
-    When I open page                # steps/demo.py:6
-    When I input "ABCDEFghijk123"   # steps/demo.py:13
-    When I click "小写"               # steps/demo.py:18
-    Then I see "abcdefGHIJK123"     # steps/demo.py:27
+    When I open page                testPageObjects.py
+    When I input "ABCDEFghijk123"   testPageObjects.py
+    When I click "小写"               testPageObjects.py
+    Then I see "abcdefGHIJK123"     testPageObjects.py
       Traceback (most recent call last):
         File "c:\users\jerry\pycharmprojects\testdemo\venv\lib\site-packages\behave\model.py", line 1329, in run
           match.run(runner.context)

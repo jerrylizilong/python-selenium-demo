@@ -1,5 +1,4 @@
 from selenium import webdriver
-import time
 
 # 初始化，打开浏览器，输入网址，并最大化
 driver = webdriver.Chrome()
