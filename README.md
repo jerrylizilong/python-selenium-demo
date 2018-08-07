@@ -25,3 +25,5 @@ convert_up_low_test.py:
 ### 3.4报告样例（在浏览器中打开）： 
 
 test_report_20180805-233950.html
+
+## demo 4： 使用 Python behave 模块进行 BDD 行为驱动测试
