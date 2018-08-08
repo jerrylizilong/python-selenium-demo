@@ -45,3 +45,24 @@ Feature: test for the lower-upper convent
 
 - test_run_as_page_object.py： 
 10条用例，分别在百度页面搜索一个关键字，并验证查询结果第一条是否包含关键字。
+
+## demo 6： 使用关键字驱动模式组织用例
+
+### keyword: 
+- 以关键字的方式组织用例步骤，可以将用例从脚本中脱离。
+- keywords.py 文件中定义了不同关键字对应的执行方法
+- 用例样例：
+```python
+Chrome,前往|http://www.baidu.com,验证标题|百度一下,填写|id@@kw@@百度,点击|id@@su,验证文字|xpath@@//*[@id="1"]/h3/a/em@@百度
+```
+- 关键字格式：
+```python
+关键字|元素定位方式@@元素属性值@@其他参数。 
+如： 填写|id@@kw@@百度   表示步骤为“填写”， 通过 id = kw 定位元素，并在定位元素中输入 “百度”
+```
+
+### 步骤定义：
+- steps.py 文件中定义了关键字对应的执行方法
+
+### 用例执行：
+- test_run_as_data_driven.py 文件中给出了5条对应的例子，分别对百度首页五个链接和功能进行测试。
