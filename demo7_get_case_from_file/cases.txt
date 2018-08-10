@@ -1,0 +1,5 @@
+Chrome,前往|http://www.baidu.com,验证标题|百度一下,填写|id@@kw@@百度,点击|id@@su,验证文字|xpath@@//*[@id="1"]/h3/a/em@@百度
+Chrome,前往|http://www.baidu.com,点击|name@@tj_trnews,验证标题|百度新闻
+Chrome,前往|http://www.baidu.com,点击|name@@tj_trhao123,验证标题|hao123
+Chrome,前往|http://www.baidu.com,点击|name@@tj_trmap,验证标题|百度地图
+Chrome,前往|http://www.baidu.com,点击|name@@tj_trtieba,验证标题|百度贴吧
