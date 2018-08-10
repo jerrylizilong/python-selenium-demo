@@ -31,7 +31,6 @@ class steps(object):
 
     # 驱动初始化
     def init_driver(self,browser_type):
-        browser_type=='Firefox'
         if browser_type == 'Chrome':
             driver = webdriver.Chrome()
         else:
@@ -67,12 +66,12 @@ class steps(object):
         time.sleep(2)
         element = self.find_element(driver,by,value)
         if element !=None:
-            print(text,element.text)
+            print('期待值： %s, 实际值 : %s' %(text,element.text))
             assert text in element.text
 
     # 验证页面标题中是否包含指定文字
     def assert_title(self,driver,para_list):
         [text] = para_list
         time.sleep(2)
-        print(text,driver.title)
+        print('期待值： %s, 实际值 : %s' % (text, driver.title))
         assert text in driver.title
