@@ -1,4 +1,4 @@
-from page_object.page_object import testBaiduPage
+from demo5_page_object.page_object import testBaiduPage
 import unittest
 
 

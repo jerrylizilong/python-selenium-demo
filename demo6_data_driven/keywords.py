@@ -1,4 +1,4 @@
-from data_driven.steps import steps
+from demo6_data_driven.steps import steps
 
 # 关键字定义，通过关键字匹配对应的方法。 可根据需要新增对应的关键字和对应方法。
 def get_keyword(driver,keyword,para_list):

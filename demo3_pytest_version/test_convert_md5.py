@@ -1,5 +1,5 @@
 import unittest
-from pytest_version import convert_md5
+from demo3_pytest_version import convert_md5
 
 
 class MyTestCase(unittest.TestCase):

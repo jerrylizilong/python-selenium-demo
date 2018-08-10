@@ -31,6 +31,7 @@ class steps(object):
 
     # 驱动初始化
     def init_driver(self,browser_type):
+        browser_type=='Firefox'
         if browser_type == 'Chrome':
             driver = webdriver.Chrome()
         else:
@@ -57,7 +58,7 @@ class steps(object):
         time.sleep(2)
         element = self.find_element(driver,by,value)
         if element !=None:
-            element.send_keys()
+            element.send_keys('')
             element.send_keys(text)
 
     # 验证给定元素中是否包含指定文字
