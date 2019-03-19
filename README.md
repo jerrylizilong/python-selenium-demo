@@ -76,3 +76,21 @@ Chrome,前往|http://www.baidu.com,验证标题|百度一下,填写|id@@kw@@百�
 - 用例可以使用不同的存储方式进行独立存储，完全脱离于执行用例的脚本。
 - 可通过数据库、excel、txt 等不同的方式存储用例。 这里以txt 为例，演示如何读取用例并执行。
 - 为提高测试执行效率，使用multiprocessing 模块对用例进行并发执行。 可根据需要设置具体的并发数。
+
+
+## demo 8： 使用PageObject设计模式组织用例
+
+- page_object.py ： 存放页面元素对象及对应操作方法
+
+```python
+        self.search_box =(By.ID,'kw')
+        self.search_button = (By.ID,'su')
+        self.search_result = (By.XPATH,'//*[@id="1"]/h3/a[1]/em')
+```
+
+- test_run_as_page_object.py： 调用方式如下
+```python
+        self.driver.find_element(*testBaiduPage().search_box).send_keys('testerhome')
+        self.driver.find_element(*testBaiduPage().search_button).click()
+        assert 'TesterHome' in self.driver.find_element(*testBaiduPage().search_result).text
+```
