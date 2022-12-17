@@ -94,3 +94,25 @@ Chrome,前往|http://www.baidu.com,验证标题|百度一下,填写|id@@kw@@百�
         self.driver.find_element(*testBaiduPage().search_button).click()
         assert 'TesterHome' in self.driver.find_element(*testBaiduPage().search_result).text
 ```
+
+
+## demo 9： 使用pytest 的pytest.mark.parametrize 进行参数化组织用例
+```commandline
+('keyword,language,result',[
+    ('test','英语','测验'),
+    ('android','英语','安卓'),
+    ('mobile','英语','可移动的'),
+    ('country','英语','国'),
+    ('value','英语','价值'),
+    ('football','英语','足球运动'),
+    ('篮球','中文(简体)','Basketball'),
+    ('Futebol','葡萄牙语','足球运动'),
+    ('ワールドカップ','日语','世界杯'),
+    ('网球','中文(简体)','Tennis'),
+    ('Copa del mundo','西班牙语','世界杯'),
+    ('足球','中文(简体)','Football'),
+
+])
+def test_baidu_translate(homepage_driver,keyword,language,result):
+```
+
