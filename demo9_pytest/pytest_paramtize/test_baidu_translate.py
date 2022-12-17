@@ -1,3 +1,4 @@
+import allure
 import pytest
 from selenium.webdriver.common.by import By
 import time
@@ -28,7 +29,7 @@ def test_baidu_translate(homepage_driver,keyword,language,result):
 
     filename = ("%s-%s-%s.png" %(keyword,language,result)).strip()
     homepage_driver.save_screenshot(filename)
-
+    allure.attach.file(filename,name=filename)
     assert actual_result == result
     assert actual_language == language
 

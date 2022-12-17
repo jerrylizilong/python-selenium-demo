@@ -97,6 +97,9 @@ Chrome,前往|http://www.baidu.com,验证标题|百度一下,填写|id@@kw@@百�
 
 
 ## demo 9： 使用pytest 的pytest.mark.parametrize 进行参数化组织用例
+需安装 pytest
+![](allure-report.jpeg)
+
 ```commandline
 ('keyword,language,result',[
     ('test','英语','测验'),
